@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Riso</title> 
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff0000;
+            padding: 10px;
+        }
+
+        .tab {
+            position: relative;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #5a0202;
+            margin: 0 5px;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        .tab:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+            min-width: 160px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .tab:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            text-decoration: none;
+            display: block;
+            padding: 8px 12px;
+            color: #333;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Esconde todas as seções inicialmente */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Mostra a seção ativa e oculta as outras */
+        .tab-content.active {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        
+            <img src="imgs/horadorisologo.png" height="200px"  alt="Hora do Riso Logo">
+
+    </header>
+
+    <nav>
+        <button class="tab active" onclick="openTab(event, 'index')">Início</button>
+        <button class="tab" onclick="openTab(event, 'sobre')">Sobre o Evento</button>
+        <button class="tab" onclick="openTab(event, 'eventos')">Eventos</button>
+        <button class="tab" onclick="openTab(event, 'local')">Local</button>
+        <button class="tab" onclick="openTab(event, 'contatos')">Contatos</button>
+    </nav>
+    <section id="index" class="tab-content active" style="text-align: center;">
+        <h3>Início</h3>
+        <p>O maior e melhor evento de comédia de Portugal está quase a chegar à tua escola, e tu não vais querer perder!
+        Vem ver os teus comediantes<br>favoritos e as tuas séries e filmes de comédia favoritos!</p>
+        <p>Artistas como: Pedro Teixeira da Mota, Fábio Porchat e Fernando Rocha estarão presentes!</p>
+        <img src="imgs/ptm1.jpg" height="350px" alt="ptm1">
+        <img src="imgs/wr2.jpg" height="350px" alt="wr1">
+        <img src="imgs/the office.jpg" height="350px" alt="the office">
+    </section>
+    
+    <section id="sobre" class="tab-content" style="text-align: center; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <h3>Sobre o Evento</h3>
+        <p>O evento vai acontecer entre os dias 14/04 a 16/04.<br>
+            No dia 14/04 será o dia do amor e teremos o evento "Hora do Romance"<br>
+            No dia 15/04 será o dia das pessoas que gostam de ouvir piadas sobre todos os temas possíveis e teremos o evento "Hora do Stand-up"<br>
+            No dia 16/04 será o dia de relembrar as sitcoms mais icónicas de sempre e também teremos um convidado especial no evento "Hora da Sitcom"
+        </p>
+    </section>
+    
+    <section id="eventos" class="tab-content">
+        <h3 style="text-align: center;">Eventos</h3> 
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 20px;">
+    
+            <!-- Espaço para Logo 1 e Imagem Abaixo -->
+            <div style="width: 30%; margin: 10px; text-align: center;">
+                <img src="imgs/horadoromance.png" alt="Imagem 3" style="width: 100%; height: 200px; object-fit: contain;">
+                <p style="margin-top: 10px;">Data: 16/04/2024</p> 
+                <div style="width: 100%; height: 150px; margin-top: 10px; display: flex;">
+                    <img src="imgs/theproposal.png" alt="Imagem adicional 3" style="width: 50%; height: 100%; object-fit: contain;">
+                    <img src="imgs/anyonebutyou.png" alt="Imagem adicional 3" style="width: 50%; height: 100%; object-fit: contain;">
+                    <img src="imgs/lalaland.jpg" alt="Imagem adicional 3" style="width: 50%; height: 100%; object-fit: contain;">
+                </div>
+            </div>
+    
+            <!-- Espaço para Logo 2 e Imagem Abaixo -->
+                <div style="width: 30%; margin: 10px; text-align: center;">
+                    <img src="imgs/horadositcomlogo.png" alt="Imagem 3" style="width: 100%; height: 200px; object-fit: contain;">
+                    <p style="margin-top: 10px;">Data: 16/04/2024</p> 
+                    <div style="width: 100%; height: 150px; margin-top: 10px; display: flex;">
+                        <img src="imgs/wr2.jpg" alt="Imagem adicional 3" style="width: 50%; height: 100%; object-fit: contain;">
+                        <img src="imgs/theoffice2.png" alt="Imagem adicional 3" style="width: 50%; height: 100%; object-fit: contain;">
+                        <img src="imgs/bbtjpg.jpg" alt="Imagem adicional 3" style="width: 50%; height: 100%; object-fit: contain;">
+                </div>
+            </div>
+    
+            <!-- Espaço para Logo 3 e Imagem Abaixo -->
+            <div style="width: 30%; margin: 10px; text-align: center;">
+                <img src="imgs/horadostanduplogo.png" alt="Imagem 3" style="width: 100%; height: 200px; object-fit: contain;">
+                <p style="margin-top: 10px;">Data: 16/04/2024</p> 
+                <div style="width: 100%; height: 150px; margin-top: 10px; display: flex;">
+                    <img src="imgs/ptm2.png" alt="Imagem adicional 3" style="width: 50%; height: 100%; object-fit: contain;">
+                    <img src="imgs/kevinhart.png" alt="Imagem adicional 3" style="width: 50%; height: 100%; object-fit: contain;">
+                    <img src="imgs/fabioporchat.png" alt="Imagem adicional 3" style="width: 50%; height: 100%; object-fit: contain;">
+                </div>
+            </div>
+            
+    
+        </div>
+    </section>
+    
+    
+    
+
+    <section id="local" class="tab-content" style="text-align: center;">
+        <h3>Local</h3>
+        <p>Rua de São Sebastião da Pedreira 37, Lisboa 1050.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.468190795666!2d-9.152100325192428!3d38.73001715656489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd193374435182bf%3A0xb2cb444e0443f7ad!2sEscola%20Profissional%20de%20Comunica%C3%A7%C3%A3o%20e%20Imagem!5e0!3m2!1spt-PT!2spt!4v1728515734651!5m2!1spt-PT!2spt" height="350" style="border:0; width: 80%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    
+    <section id="contatos" class="tab-content" style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+        <h3>Contatos</h3>
+        <p>
+            Nº de telefone: 964 440 877<br>
+            Email: geral@horadoriso.pt
+        </p>
+    </section>
+    
+
+    <footer>
+        <p>&copy; Hora do Riso - Feito em âmbito em escolar pelo aluno Duarte Semedo.</p>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Exibir a aba "Início" por padrão ao carregar a página
+        document.getElementById("index").style.display = "block";
+    });
+
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+
+        // Esconder todo o conteúdo das tabs
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Remover a classe "active" de todos os botões de tab
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Mostrar o conteúdo da tab clicada e adicionar a classe "active" ao botão clicado
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    </script>
+</body>
+</html>
